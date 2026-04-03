@@ -54,7 +54,7 @@ npm run preview # serve dist/
 
 ### State management
 
-Redux store (`src/store/store.js`) combines a **`finance` slice** (`src/store/financeSlice.js`) with **redux-persist** so **transactions**, **role**, and **theme** survive reloads under the persist key `zorvyn-finance`. Filters, search, and sort live in the same slice but are **not** whitelisted for persistence, so they reset on refresh.
+Redux store (src/store/store.js) combines a **finance slice** (src/store/financeSlice.js) with **redux-persist** so **transactions**, **role**, and **theme** survive reloads under the persist key zorvyn-finance. Filters, search, and sort live in the same slice but are **not** whitelisted for persistence, so they reset on refresh.
 
 ### UX details
 
@@ -64,20 +64,14 @@ Redux store (`src/store/store.js`) combines a **`finance` slice** (`src/store/fi
 
 ## Project layout
 
-```
 src/
-  components/     # UI sections (summary, charts, transactions, dialogs)
-  data/             # Seed / mock transactions
-  hooks/            # Theme class sync with `document.documentElement`
-  lib/              # Formatting and insight helpers
-  store/            # Redux store, finance slice, selectors, chart helpers
-```
+components/ # UI sections (summary, charts, transactions, dialogs)
+data/ # Seed / mock transactions
+hooks/ # Theme class sync with `document.documentElement`
+lib/ # Formatting and insight helpers
+store/ # Redux store, finance slice, selectors, chart helpers
 
 ## Assumptions
 
 - Currency is **USD** for display and CSV export.
 - Dates are stored as `YYYY-MM-DD` strings; charts aggregate by calendar month.
-
-## License
-
-Evaluation / assignment use only.
